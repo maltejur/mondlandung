@@ -10,13 +10,17 @@ let velocity = 0;
 let position = 80;
 let done = false;
 let thrusting = false;
+let fuel = 100;
 
 setInterval(() => {
   if (done) return;
+  thrusting = thrusting && fuel > 0;
+  if (thrusting) fuel -= 0.3;
   const force = -gravity + (thrusting ? 30 : 0);
-  stats.innerText = `Position:\t${position} m
-Velocity:\t${velocity} m/s
-Force:\t\t${force} m/s^2`;
+  stats.innerText = `Position:\t${position.toFixed(0)} m
+Velocity:\t${velocity.toFixed(2)} m/s
+Force:\t${force} m/s^2
+Fuel:\t${fuel.toFixed(0)}`;
   velocity += force / 100;
   position += velocity / 100;
   lander.style.bottom = (position * 10).toString() + "px";
