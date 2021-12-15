@@ -1,0 +1,27 @@
+#game {
+  width: 1000px;
+  height: 1000px;
+  position: relative;
+  border: solid black 1px;
+  float: left;
+}
+
+#lander {
+  position: absolute;
+  width: 100px;
+  height: 200px;
+  background-color: gray;
+  left: 450px;
+}
+
+#flame {
+  position: absolute;
+  width: 20px;
+  height: 50px;
+  background-color: orange;
+  left: 490px;
+}
+
+#status {
+  font-size: 30px;
+}
