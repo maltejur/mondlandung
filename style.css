@@ -1,6 +1,16 @@
+body {
+  background: black;
+  color: white;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
 #game {
   width: 1000px;
-  height: 1000px;
+  height: 800px;
   position: relative;
   border: solid black 1px;
   float: left;
@@ -9,8 +19,9 @@
 #lander {
   position: absolute;
   width: 100px;
-  height: 200px;
-  background-color: gray;
+  height: 80px;
+  background: url(./lander.png);
+  background-size: contain;
   left: 450px;
 }
 
@@ -18,10 +29,20 @@
   position: absolute;
   width: 20px;
   height: 50px;
-  background-color: orange;
+  background: url(./flamme.png);
+  background-size: cover;
   left: 490px;
 }
 
 #status {
   font-size: 30px;
+}
+
+#moon {
+  background: url(./moon.jpg);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 800px;
+  bottom: 0;
 }

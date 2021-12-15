@@ -6,7 +6,7 @@ const flame = document.getElementById("flame");
 
 let gravity = 10;
 let velocity = 0;
-let position = 100;
+let position = 80;
 let done = false;
 let thrusting = false;
 
