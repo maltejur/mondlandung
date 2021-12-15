@@ -46,3 +46,14 @@ body {
   top: 800px;
   bottom: 0;
 }
+
+#explosion {
+  width: 100px;
+  height: 100px;
+  background: url(./explosion.gif);
+  background-size: cover;
+  position: absolute;
+  left: 450px;
+  bottom: 0;
+  display: none;
+}

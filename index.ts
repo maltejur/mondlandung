@@ -3,6 +3,7 @@ const lander = document.getElementById("lander");
 const statusE = document.getElementById("status");
 const stats = document.getElementById("stats");
 const flame = document.getElementById("flame");
+const explosion = document.getElementById("explosion");
 
 let gravity = 10;
 let velocity = 0;
@@ -27,6 +28,10 @@ Force:\t\t${force} m/s^2`;
       statusE.innerHTML = `<span style="color:green">Success</span>`;
     } else {
       statusE.innerHTML = `<span style="color:red">Failed</span>`;
+      explosion.style.display = "unset";
+      setTimeout(() => {
+        explosion.style.display = "none";
+      }, 1000);
     }
   }
 }, 10);
